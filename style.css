@@ -1,15 +1,24 @@
 :root {
     --S-color: #875ed2; /* 定义颜色变量 */
-    --Bg-color: rgb(248, 248, 254);
+    --Bg-color: rgb(250, 250, 255);
     --T-color: #514262;
     --L-color: #dcd5eb;
     --Bu-dColor:#004c97;
     --Bu-hColor:#60acf8;
     --Margin-Bottom-default: 13px;
-    --P-Margin-asLinehight: 3.6px;
-    --Width-default: 70%;
-    --FontSize-text: 18px;
-    --FontSize-title: 20px;
+    --P-Margin-asLinehight: 8px;
+    --Width-default: 60%;
+    --FontSize-text: 16px;
+    --FontSize-title: 17px;
+}
+@media (max-width: 768px) {
+    :root {
+        --Margin-Bottom-default: 11px;
+        --P-Margin-asLinehight: 7px;
+        --Width-default: 90%;
+        --FontSize-text: 14px;
+        --FontSize-title: 16px;
+    }
 }
 
 body {
@@ -17,14 +26,15 @@ body {
     font-weight:100; 
     margin: 0;
     padding: 0;
-    background-color: var(--Bg-color);
+    /* background-color: var(--Bg-color); */
     color: var(--T-color);
+    font-size: var(--FontSize-text);
 }
 
 header {
     background-color: #fff;
     color: #fff;
-    padding: 10px 0;
+    padding: 0 0 10px 0;
 }
 
 .menu-toggle {
@@ -32,16 +42,15 @@ header {
     cursor: pointer;
     position: absolute;
     right: 5%; /* 使图标位于右侧 */
-    top: 15px; /* 调整图标的垂直位置 */
+    top: 55%; /* 调整图标的垂直位置 */
     transform: translateY(-50%);
     font-size: 24px;
     z-index: 1001; /* 确保图标位于其他元素之上 */
 }
 .menu-title {
-    display: none; /* 默认隐藏标题文字 */
-    font-size: 18px;
+    display: none; 
+    font-size: var(--FontSize-title);
     font-weight: bold;
-    /* margin-right: auto; 将标题文字推到左边 */
     color: var(--T-color);
     position: absolute;
     left: 5%;
@@ -50,12 +59,13 @@ header {
 
 nav {
     position: relative;
-    min-height: 30px; /* 确保导航条有最小高度 */
+    min-height: 20px; /* 确保导航条有最小高度 */
     display: flex;
     align-items: center; /* 垂直居中对齐内容 */
-    padding: 0 10px; /* 添加内边距确保内容不紧贴边缘 */
+    padding: 5px;
     background-color: #fff; /* 可选：设置导航条背景色 */
     justify-content: flex-end;
+    box-shadow: 0 0px 20px rgba(179, 155, 216, 0.2);
 }
 
 nav ul {
@@ -76,7 +86,7 @@ nav ul li {
 }
 nav ul li a {
     display: block; /* 使 <a> 标签占据整个 li */
-    padding: 10px 15px; /* 内边距确保点击区域足够大 */
+    padding: 0 30px; /* 内边距确保点击区域足够大 */
     text-decoration: none; /* 去掉默认的下划线 */
     color: var(--T-color);
     padding-right:0 ;
@@ -89,12 +99,15 @@ nav ul li a {
     }
     .menu-toggle {
         display: block;
+        
         /* position: relative;
         /* z-index: 1001; */
         /* align-items: end; */ 
     }
     nav{
         z-index: 1001; /* 确保图标位于其他元素之上 */
+        padding: 10px 0;
+        justify-content: center;
     }
 
     nav ul {
@@ -105,8 +118,8 @@ nav ul li a {
         top: 35px;
         right: 5%;
         width: auto; /* 宽度自动适应内容 */
-        min-width: 150px; /* 设置最小宽度，避免过窄 */
-        box-shadow: 0 4px 8px var(--L-color); /* 添加阴影效果 */
+        min-width: 100px; /* 设置最小宽度，避免过窄 */
+        box-shadow: 0 0px 5px var(--L-color); /* 添加阴影效果 */
         border-radius: 8px; /* 可选：添加圆角 */
     }
 
@@ -133,19 +146,16 @@ a {
 a:hover {
     color: var(--S-color);
 }
+
 p{
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
-header {
-    background-color: #fff;
-    color: #fff;
-    padding: 10px 0;
-}
+
 .link-inline{
     color:var(--S-color);
     font-size: var(--FontSize-text);
-    /* font-style: italic; */ 
+    font-style: italic; 
     /* text-decoration: underline; */
     
 }
@@ -183,6 +193,7 @@ h4{
     padding: 0; 
     font-size: var(--FontSize-text); 
     font-weight: bold;
+    line-height: 1.5;
 }
 
 .icon-button{
@@ -192,33 +203,30 @@ h4{
 }
 
 
+
+
+/* index */
 .container {
     display: flex;
     align-items: flex-start; 
-    gap: 5%;
+    gap:5%;
     /* height: 100vh; */
     width: var(--Width-default);
     margin: 0 auto;
-    padding-top: 3%;
-    font-size: var(--FontSize-text);
+    padding-top: 1%;
 }
 .container-education {
     display: flex;
     align-items: flex-start; 
     gap: 5%;
-    /* height: 100vh; */
     width: 100%;
     margin: 0 auto;
-    /* padding-top: 5%; */
-    font-size: var(--FontSize-text);
 }
 .container-education p{
-    margin: var(--P-Margin-asLinehight) 0 0 0;
+    margin: 0;
     padding: 0;
 }
 .left-h {
-    /* background-color: #ffffff; */
-    /* padding: 20px; */
     margin-bottom: var(--Margin-Bottom-default);
     width: 70%;
     box-sizing: border-box;
@@ -228,8 +236,6 @@ h4{
     justify-content: center;
 }
 .right-s {
-    /* background-color: #fff; */
-    /* padding: 40px; */
     margin-bottom: var(--Margin-Bottom-default);
     width: 30%;
     box-sizing: border-box;
@@ -237,11 +243,8 @@ h4{
     text-align: right;
 }
 .left-s {
-    /* background-color: #ffffff; */
-    /* color: white; */
-    /* padding: 20px; */
     margin: 0 auto;
-    width: 25%;
+    width: 20%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -252,10 +255,8 @@ h4{
     margin:0 ;
 }
 .right-h {
-    /* background-color: #fff; */
-    /* padding: 40px; */
     margin: 0 auto;
-    width: var(--Width-default);
+    width: 80%;
     box-sizing: border-box;
     overflow-y: auto;
 }
@@ -287,6 +288,7 @@ h4{
     height: width;
     /* border-radius: 5%; */
     margin-bottom: 20px;
+    margin-top: 8px;
 }
 
 .link-container {
@@ -295,14 +297,13 @@ h4{
     display: flex;
     flex-direction: column;
     align-items: start;
-    /* gap: 10px; */
 }
 
 
 
 
 .skills p{
-    margin-top: var(--P-Margin-asLinehight);
+    margin: 0;
 }
 .skills div{
     margin-bottom: var(--Margin-Bottom-default);
@@ -330,39 +331,43 @@ h4{
 
 /* publications */
 .paper{
+    width: 55%;
     display: flex;
-    align-items: flex-start; 
     align-items: stretch;
-    /* gap: 2%; */
-    /* height: 100vh; */
-    width: var(--Width-default);
-    padding-bottom: 5%;
+    padding: 1% 0;
     font-size: var(--FontSize-text);
     border-bottom:1px solid var(--L-color);
+    margin:0 auto;
+    gap: 5%;
 }
 .paper .left-s{
     position: relative; /* 为图片设置绝对定位提供相对参考 */
     overflow: hidden; /* 防止图片超出容器时溢出 */
     border: 1px solid var(--L-color);
+    margin: 0;
+    width: 20%;
 }
 .paper .left-s::before {
     content: "";
     display: block;
     padding-top: 60%; 
 }
+.paper .right-h{
+    margin: 0;
+    width: 80%;
+}
 .info{
     display: flex;
     align-items: center; 
-    /* justify-content: center; */
     gap: 8px; 
 }
 .title, .author, info{
-    margin-bottom: 10px;
+    margin-bottom: var(--P-Margin-asLinehight);
 }
 .title h3{
     border: none;
     padding-bottom: 0;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 .me{
     color: var(--S-color);
@@ -376,14 +381,14 @@ h4{
 .conf, .link, .pdf, .github {
     display: inline-flex; /* 确保链接内部元素如图标可以正确居中 */
     align-items: center;
-    /* justify-content: center; */
     text-decoration: none; /* 去除超链接下划线 */
 }
 
 .conf {
     font-size: var(--FontSize-title); /* 根据需要设置字体大小 */
-    color: #000; /* 根据需要设置文字颜色 */
+    color: var(--T-color); /* 根据需要设置文字颜色 */
 }
+
 .pubImg{
     position: absolute;
     width:100%;
@@ -395,13 +400,11 @@ h4{
 @media (max-width: 768px) {
     .paper{
         flex-direction: column;
-        width: 90%;
-        padding-bottom: 30px;
-        margin-bottom: 30px;
+        width: var(--Width-default);
+        padding-bottom: 3%;
+        margin-bottom: 5%;
     }
-    .title, .author, info{
-        margin-bottom: 0;
-    }
+    
 }
 
 
@@ -430,6 +433,7 @@ h4{
     height: 100vh;
     /* overflow-y: auto; */
     margin: 0 auto;
+    padding-top: 1%;
 }
 .projects-container h3{
     border: 0;
@@ -440,9 +444,8 @@ h4{
 /* Left list of projects */
 .projects-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 调整最小宽度为250px，确保在宽屏时item更大 */
-    gap: 20px;
-    /* padding: 20px; */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 调整最小宽度为250px，确保在宽屏时item更大 */
+    gap: 10px;
 }
 
 /* Projects item */
@@ -451,19 +454,23 @@ h4{
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    /* padding: 20px; */
     cursor: pointer;
     box-sizing: border-box;
     transition: transform 0.3s ease;
-    margin-bottom: 10px;
-    /* aspect-ratio: 1 / 1; 保持 1:1 比例 */
+    margin-bottom: 15px;
 }
+
 
 .projects-item img {
     width: 100%;
     height: auto;
     aspect-ratio: 4 / 3; /* 保持 3:4 比例 */
     margin-bottom: 10px; /* 图片与文字之间的间距 */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.projects-item:hover img{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(179, 155, 216, 0.2);
 }
 
 /* 半透明背景层 */
@@ -485,7 +492,7 @@ h4{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 40%;
     background-color: #fff;
     padding: 40px 30px;
     z-index: 20;
@@ -526,11 +533,9 @@ h4{
 
 /* 窄屏时弹窗占满整个页面 */
 @media (max-width: 768px) {
-    .projects-container {
-        width: 90%;
-    }
+    
     .modal {
-        width: 90%;
+        width: var(--Width-default);
         height: 90%;
     }
 }

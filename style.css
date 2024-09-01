@@ -106,7 +106,7 @@ nav ul li a {
     }
     nav{
         z-index: 1001; /* 确保图标位于其他元素之上 */
-        padding: 10px 0;
+        padding: 15px 0;
         justify-content: center;
     }
 

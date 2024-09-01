@@ -1,0 +1,552 @@
+:root {
+    --S-color: #875ed2; /* 定义颜色变量 */
+    --Bg-color: rgb(248, 248, 254);
+    --T-color: #514262;
+    --L-color: #dcd5eb;
+    --Bu-dColor:#004c97;
+    --Bu-hColor:#60acf8;
+    --Margin-Bottom-default: 13px;
+    --P-Margin-asLinehight: 3.6px;
+    --Width-default: 70%;
+    --FontSize-text: 18px;
+    --FontSize-title: 20px;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif Roman, sans-serif;
+    font-weight:100; 
+    margin: 0;
+    padding: 0;
+    background-color: var(--Bg-color);
+    color: var(--T-color);
+}
+
+header {
+    background-color: #fff;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.menu-toggle {
+    display: none; /* 默认隐藏，宽屏时不显示 */
+    cursor: pointer;
+    position: absolute;
+    right: 5%; /* 使图标位于右侧 */
+    top: 15px; /* 调整图标的垂直位置 */
+    transform: translateY(-50%);
+    font-size: 24px;
+    z-index: 1001; /* 确保图标位于其他元素之上 */
+}
+.menu-title {
+    display: none; /* 默认隐藏标题文字 */
+    font-size: 18px;
+    font-weight: bold;
+    /* margin-right: auto; 将标题文字推到左边 */
+    color: var(--T-color);
+    position: absolute;
+    left: 5%;
+}
+
+
+nav {
+    position: relative;
+    min-height: 30px; /* 确保导航条有最小高度 */
+    display: flex;
+    align-items: center; /* 垂直居中对齐内容 */
+    padding: 0 10px; /* 添加内边距确保内容不紧贴边缘 */
+    background-color: #fff; /* 可选：设置导航条背景色 */
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style-type: none;
+    width: var(--Width-default);
+    margin: 10px auto;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* 使导航条靠右排列 */
+    text-align: right;    
+    color: var(--T-color); /* 确保图标颜色为可见颜色 */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 0 0 20px;
+    align-items: end;
+}
+nav ul li a {
+    display: block; /* 使 <a> 标签占据整个 li */
+    padding: 10px 15px; /* 内边距确保点击区域足够大 */
+    text-decoration: none; /* 去掉默认的下划线 */
+    color: var(--T-color);
+    padding-right:0 ;
+}
+
+/* 在屏幕较窄时显示折叠菜单按钮，并隐藏菜单项 */
+@media (max-width: 768px) {
+    .menu-title {
+        display: block; /* 小屏幕下显示标题文字 */
+    }
+    .menu-toggle {
+        display: block;
+        /* position: relative;
+        /* z-index: 1001; */
+        /* align-items: end; */ 
+    }
+    nav{
+        z-index: 1001; /* 确保图标位于其他元素之上 */
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 35px;
+        right: 5%;
+        width: auto; /* 宽度自动适应内容 */
+        min-width: 150px; /* 设置最小宽度，避免过窄 */
+        box-shadow: 0 4px 8px var(--L-color); /* 添加阴影效果 */
+        border-radius: 8px; /* 可选：添加圆角 */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+        padding: 10px 15px; /* 内边距使得内容更美观 */
+    }
+
+    nav ul li:hover {
+        background-color: #f0f0f0; /* 悬停时显示底色 */
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+a {
+    color: var(--T-color);
+    text-decoration: none;
+    font-size: var(--FontSize-text);
+}
+a:hover {
+    color: var(--S-color);
+}
+p{
+    line-height: 1.2;
+}
+
+header {
+    background-color: #fff;
+    color: #fff;
+    padding: 10px 0;
+}
+.link-inline{
+    color:var(--S-color);
+    font-size: var(--FontSize-text);
+    /* font-style: italic; */ 
+    /* text-decoration: underline; */
+    
+}
+.link-inline:hover {
+    color: var(--S-color);
+    font-size: var(--FontSize-text);
+    /* border-bottom: 1px solid var(--S-color); 添加底部边框 */
+    text-decoration: underline;
+}
+
+
+
+/* button */
+.selected{
+    color:var(--S-color);
+    /* border-bottom: 1px solid var(--S-color); 在盒子下方添加描边 */
+    text-decoration: underline;
+}
+
+
+section{
+    margin: 0 auto 5% auto;
+}
+
+
+h3 {
+    margin-top: 0;
+    margin-bottom: var(--Margin-Bottom-default); /* 设置下方的外边距 */
+    padding-bottom: 10px; /* 设置下方的内边距 */
+    border-bottom: 1px solid var(--L-color); /* 在盒子下方添加描边 */
+    font-size: var(--FontSize-title);
+}
+h4{
+    margin: 0;
+    padding: 0; 
+    font-size: var(--FontSize-text); 
+    font-weight: bold;
+}
+
+.icon-button{
+    width: 18px;
+    height: 18px;
+    margin: 0 10px;
+}
+
+
+.container {
+    display: flex;
+    align-items: flex-start; 
+    gap: 5%;
+    /* height: 100vh; */
+    width: var(--Width-default);
+    margin: 0 auto;
+    padding-top: 3%;
+    font-size: var(--FontSize-text);
+}
+.container-education {
+    display: flex;
+    align-items: flex-start; 
+    gap: 5%;
+    /* height: 100vh; */
+    width: 100%;
+    margin: 0 auto;
+    /* padding-top: 5%; */
+    font-size: var(--FontSize-text);
+}
+.container-education p{
+    margin: var(--P-Margin-asLinehight) 0 0 0;
+    padding: 0;
+}
+.left-h {
+    /* background-color: #ffffff; */
+    /* padding: 20px; */
+    margin-bottom: var(--Margin-Bottom-default);
+    width: 70%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+.right-s {
+    /* background-color: #fff; */
+    /* padding: 40px; */
+    margin-bottom: var(--Margin-Bottom-default);
+    width: 30%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    text-align: right;
+}
+.left-s {
+    /* background-color: #ffffff; */
+    /* color: white; */
+    /* padding: 20px; */
+    margin: 0 auto;
+    width: 25%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.left-s p {
+    margin:0 ;
+}
+.right-h {
+    /* background-color: #fff; */
+    /* padding: 40px; */
+    margin: 0 auto;
+    width: var(--Width-default);
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+/* 当屏幕较窄时，将左栏移动到右栏上方 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+    .container-education{
+        flex-direction: column;
+    }
+
+    .left-s, .right-h, .left-h, .right-s {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .left-s, .right-s{
+        margin-bottom: 20px; /* 添加下边距，使两栏之间有间距 */
+    }
+}
+
+
+.profile-photo {
+    max-width: 100%;
+    height: width;
+    /* border-radius: 5%; */
+    margin-bottom: 20px;
+}
+
+.link-container {
+    margin-top: 0;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* gap: 10px; */
+}
+
+
+
+
+.skills p{
+    margin-top: var(--P-Margin-asLinehight);
+}
+.skills div{
+    margin-bottom: var(--Margin-Bottom-default);
+}
+/* .image-container {
+    text-align: center;
+} */
+
+.image-container img {
+    display: inline-block;
+    margin-right: 10px; 
+    margin-top: var(--P-Margin-asLinehight); 
+    width: auto; 
+    height: 30px; 
+}
+
+.image-container img:last-child {
+    margin-right: 0;
+}
+
+
+
+
+
+
+/* publications */
+.paper{
+    display: flex;
+    align-items: flex-start; 
+    align-items: stretch;
+    /* gap: 2%; */
+    /* height: 100vh; */
+    width: var(--Width-default);
+    padding-bottom: 5%;
+    font-size: var(--FontSize-text);
+    border-bottom:1px solid var(--L-color);
+}
+.paper .left-s{
+    position: relative; /* 为图片设置绝对定位提供相对参考 */
+    overflow: hidden; /* 防止图片超出容器时溢出 */
+    border: 1px solid var(--L-color);
+}
+.paper .left-s::before {
+    content: "";
+    display: block;
+    padding-top: 60%; 
+}
+.info{
+    display: flex;
+    align-items: center; 
+    /* justify-content: center; */
+    gap: 8px; 
+}
+.title, .author, info{
+    margin-bottom: 10px;
+}
+.title h3{
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0px;
+}
+.me{
+    color: var(--S-color);
+    font-weight: 500;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.conf, .link, .pdf, .github {
+    display: inline-flex; /* 确保链接内部元素如图标可以正确居中 */
+    align-items: center;
+    /* justify-content: center; */
+    text-decoration: none; /* 去除超链接下划线 */
+}
+
+.conf {
+    font-size: var(--FontSize-title); /* 根据需要设置字体大小 */
+    color: #000; /* 根据需要设置文字颜色 */
+}
+.pubImg{
+    position: absolute;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: top; /* 确保显示图片的顶部部分 */
+}
+
+@media (max-width: 768px) {
+    .paper{
+        flex-direction: column;
+        width: 90%;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+    .title, .author, info{
+        margin-bottom: 0;
+    }
+}
+
+
+
+.activities{
+    width:var(--Width-default);
+}
+.activities p{
+    margin: 0;
+    padding: 0;
+}
+.activities .container{
+    width: 100%;
+    padding: 0;
+}
+
+
+
+
+
+/* projects */
+/* Container for projects and details */
+.projects-container {
+    position: relative;
+    width: var(--Width-default);
+    height: 100vh;
+    /* overflow-y: auto; */
+    margin: 0 auto;
+}
+.projects-container h3{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Left list of projects */
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 调整最小宽度为250px，确保在宽屏时item更大 */
+    gap: 20px;
+    /* padding: 20px; */
+}
+
+/* Projects item */
+.projects-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    /* padding: 20px; */
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    margin-bottom: 10px;
+    /* aspect-ratio: 1 / 1; 保持 1:1 比例 */
+}
+
+.projects-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3; /* 保持 3:4 比例 */
+    margin-bottom: 10px; /* 图片与文字之间的间距 */
+}
+
+/* 半透明背景层 */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 16, 44, 0.5);
+    z-index: 10;
+}
+
+/* 弹窗窗口 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background-color: #fff;
+    padding: 40px 30px;
+    z-index: 20;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    max-height: 90%;
+}
+
+/* 弹窗顶部布局 */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.modal img {
+    max-width: 100%;
+    height: auto;
+}
+
+.close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* 窄屏时弹窗占满整个页面 */
+@media (max-width: 768px) {
+    .projects-container {
+        width: 90%;
+    }
+    .modal {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media (max-width: 577px) {
+    .projects-item{
+        border-bottom: 1px solid var(--L-color);
+    }
+}
+
+
+
+/* footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #404040;
+    color: #fff;
+}
+ */

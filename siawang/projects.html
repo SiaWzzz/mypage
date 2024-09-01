@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qixin Wang's Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-title">Projects</div>
+            <div class="menu-toggle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 6H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 18H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <ul>
+                <li><a href="index.html">About me</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <!-- <li><a href="activities.html">Activities</a></li> -->
+                <li><a href="projects.html" class="selected">Projects</a></li>
+                <li><a href="../file/Sia‘s CV.pdf">CV</a></li>
+                <!-- <li><a href="mycat.html">MEWO</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="projects-container">
+        <div class="projects-list">
+            <!-- Example items -->
+            <div class="projects-item" data-id="1">
+                <img src="../img/paper/tasies.jpg" alt="Project 1">
+                <h3>Freely Growing</h3>
+                <p>An Interactive Installation Art Exploring Stereotyped and Limitations on female</p>
+            </div>
+            <div class="projects-item" data-id="2">
+                <img src="../img/paper/tasies.jpg" alt="Project 2">
+                <h3>See, smell, and touch the music</h3>
+                <p>A Multi-Modal Interactive Room for Hearing-Impaired Individuals</p>
+            </div>
+            <div class="projects-item" data-id="3">
+                <img src="../img/paper/tasies.jpg" alt="Project 3">
+                <h3>The Eighth Continent</h3>
+                <p>A VR Game about Environment Protection</p>
+            </div>
+            <div class="projects-item" data-id="4">
+                <img src="../img/paper/tasies.jpg" alt="Project 4">
+                <h3>Sharing Kitchen</h3>
+                <p>A service design project about self-catering shared kitchen for families of patients </p>
+            </div>
+            <div class="projects-item" data-id="5">
+                <img src="../img/paper/tasies.jpg" alt="Project 5">
+                <h3>SuperCard: Meet Dali</h3>
+                <p>A Digital Immersive Environment Interaction System about China Cultural and Tourism Promotion on WeChat Mini Program</p>
+            </div>
+            <div class="projects-item" data-id="6">
+                <img src="../img/paper/tasies.jpg" alt="Project 6">
+                <h3>Brain Painting Institute</h3>
+                <p>Research of Interactive Design for Brain Painting Community</p>
+            </div>
+            <!-- 添加更多 items -->
+        </div>
+    
+        <!-- 弹窗窗口 -->
+        <div class="modal-overlay"></div> <!-- 半透明背景层 -->
+        <div class="modal">
+            <div class="modal-header">
+                <h1 id="detail-title">Project Title</h1>
+                <button class="close-btn">&times;</button>
+            </div>
+            <img id="detail-image" src="" alt="Detail Image">
+            <p id="detail-text">Project description goes here.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- 引入 JavaScript 文件 -->
+
+</body>
+</html>

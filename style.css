@@ -7,7 +7,8 @@
     --Bu-hColor:#60acf8;
     --Margin-Bottom-default: 13px;
     --P-Margin-asLinehight: 8px;
-    --Width-default: 60%;
+    --Width-default: 70%;
+    --Width-thin:55%;
     --FontSize-text: 16px;
     --FontSize-title: 17px;
 }
@@ -82,6 +83,7 @@ nav ul {
 nav ul li {
     display: inline;
     margin: 0 0 0 20px;
+    /* margin: 0 20px; */
     align-items: end;
 }
 nav ul li a {
@@ -333,7 +335,7 @@ h4{
 
 /* publications */
 .paper{
-    width: 55%;
+    width: var(--Width-thin);
     display: flex;
     align-items: stretch;
     padding: 1.5% 0;
@@ -452,8 +454,8 @@ h4{
 /* Left list of projects */
 .projects-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); 
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 10px;
 }
 
 /* Projects item */
@@ -466,7 +468,7 @@ h4{
     cursor: pointer;
     box-sizing: border-box;
     transition: transform 0.3s ease;
-    margin-bottom: 15px;
+    /* margin-bottom: 10px; */
     overflow: hidden; /* Hide overflow to ensure that everything stays within the item bounds */
 }
 

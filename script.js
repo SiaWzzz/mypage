@@ -5,32 +5,32 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
 const projectDetails = {
     1: {
         title: "Freely Growing",
-        image: "../img/paper/tasies.jpg",
+        image: "img/paper/tasies.jpg",
         text: "Detailed description for Project 1."
     },
     2: {
         title: "See, smell, and touch the music",
-        image: "../img/paper/tasies.jpg",
+        image: "img/paper/tasies.jpg",
         text: "Detailed description for Project 2."
     },
     3: {
         title: "The Eighth Continent",
-        image: "../img/paper/tasies.jpg",
+        image: "img/paper/tasies.jpg",
         text: "Detailed description for Project 3."
     },
     4: {
         title: "Sharing Kitchen",
-        image: "../img/paper/tasies.jpg",
+        image: "img/paper/tasies.jpg",
         text: "Detailed description for Project 1."
     },
     5: {
         title: "SuperCard: Meet Dali",
-        image: "../img/paper/tasies.jpg",
+        image: "img/paper/tasies.jpg",
         text: "Detailed description for Project 2."
     },
     6: {
         title: "Brain Painting Institute",
-        image: "../img/paper/tasies.jpg",
+        image: "img/paper/tasies.jpg",
         text: "Detailed description for Project 3."
     }
     // 添加更多项目的详情

@@ -9,14 +9,14 @@ const projectDetails = {
         text: " "
     },
     2: {
-        title: "See, smell, and touch the music",
-        images: ["img/paper/tasies.jpg"],
-        text: "Detailed description for Project 2."
+        title: " ",
+        images: ["img/project/SSTM/SSTM-0.png"],
+        text: " "
     },
     3: {
-        title: "The Eighth Continent",
-        images: ["img/paper/tasies.jpg"],
-        text: "Detailed description for Project 3."
+        title: " ",
+        images: ["img/project/FB/FB-0.png"],
+        text: " "
     },
     4: {
         title: " ",

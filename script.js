@@ -24,14 +24,19 @@ const projectDetails = {
         text: " "
     },
     5: {
-        title: "SuperCard: Meet Dali",
+        title: " ",
         images: ["img/paper/tasies.jpg"],
-        text: "Detailed description for Project 5."
+        text: " "
     },
     6: {
-        title: "Brain Painting Institute",
+        title: " ",
         images: ["img/paper/tasies.jpg"],
-        text: "Detailed description for Project 6."
+        text: " "
+    }
+    7: {
+        title: " ",
+        images: ["img/paper/tasies.jpg"],
+        text: " "
     }
 };
 

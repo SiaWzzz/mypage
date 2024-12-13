@@ -1,67 +1,64 @@
 document.querySelector('.menu-toggle').addEventListener('click', function() {
     document.querySelector('nav ul').classList.toggle('active');
-    });
+});
 
 const projectDetails = {
     1: {
         title: "Freely Growing",
-        image: "img/paper/tasies.jpg",
+        images: ["img/paper/tasies.jpg"],
         text: "Detailed description for Project 1."
     },
     2: {
         title: "See, smell, and touch the music",
-        image: "img/paper/tasies.jpg",
+        images: ["img/paper/tasies.jpg"],
         text: "Detailed description for Project 2."
     },
     3: {
         title: "The Eighth Continent",
-        image: "img/paper/tasies.jpg",
+        images: ["img/paper/tasies.jpg"],
         text: "Detailed description for Project 3."
     },
     4: {
-        title: "Sharing Kitchen",
-        image: "img/paper/tasies.jpg",
-        text: "Detailed description for Project 1."
+        title: " ",
+        images: ["img/project/HT/HT-0.png", "img/project/HT/HT-1.png", "img/project/HT/HT-2.png", "img/project/HT/HT-3.png", "img/project/HT/HT-4.png", "img/project/HT/HT-5.png", "img/project/HT/HT-6.png"],
+        text: " "
     },
     5: {
         title: "SuperCard: Meet Dali",
-        image: "img/paper/tasies.jpg",
-        text: "Detailed description for Project 2."
+        images: ["img/paper/tasies.jpg"],
+        text: "Detailed description for Project 5."
     },
     6: {
         title: "Brain Painting Institute",
-        image: "img/paper/tasies.jpg",
-        text: "Detailed description for Project 3."
+        images: ["img/paper/tasies.jpg"],
+        text: "Detailed description for Project 6."
     }
-    // 添加更多项目的详情
 };
+
 document.querySelectorAll('.projects-item').forEach(item => {
     item.addEventListener('click', function() {
         const projectId = this.getAttribute('data-id');
+        const project = projectDetails[projectId];
 
-        // 更新弹窗内容
-        document.getElementById('detail-title').innerText = projectDetails[projectId].title;
-        document.getElementById('detail-image').src = projectDetails[projectId].image;
-        document.getElementById('detail-text').innerText = projectDetails[projectId].text;
+        document.getElementById('detail-title').textContent = project.title;
+        document.getElementById('detail-text').textContent = project.text;
 
-        // 显示弹窗和半透明背景
-        document.querySelector('.modal-overlay').style.display = 'block';
-        document.querySelector('.modal').style.display = 'block';
+        const imageContainer = document.getElementById('detail-images');
+        imageContainer.innerHTML = ''; // 清空之前的图片
+
+        project.images.forEach(src => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = project.title;
+            imageContainer.appendChild(img);
+        });
+
+        document.querySelector('.modal-overlay').classList.add('active');
+        document.querySelector('.modal').classList.add('active');
     });
 });
 
-// 关闭弹窗功能 - 点击关闭按钮
 document.querySelector('.close-btn').addEventListener('click', function() {
-    closeModal();
+    document.querySelector('.modal-overlay').classList.remove('active');
+    document.querySelector('.modal').classList.remove('active');
 });
-
-// 关闭弹窗功能 - 点击空白处（半透明背景）
-document.querySelector('.modal-overlay').addEventListener('click', function() {
-    closeModal();
-});
-
-function closeModal() {
-    // 隐藏弹窗和半透明背景
-    document.querySelector('.modal-overlay').style.display = 'none';
-    document.querySelector('.modal').style.display = 'none';
-}

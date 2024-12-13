@@ -549,7 +549,13 @@ h4{
     margin: 0;
     font-size: 24px;
 }
+.modal-overlay.active {
+    display: block;
+}
 
+.modal.active {
+    display: block;
+}
 .modal img {
     max-width: 100%;
     height: auto;

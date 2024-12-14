@@ -5,22 +5,22 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
 const projectDetails = {
     1: {
         title: " ",
-        images: ["img/project/SG-0.png", "img/project/SG-1.png", "img/project/SG-2.png", "img/project/SG-3.png", "img/project/SG-4.png", "img/project/SG-5.png", "img/project/preview.gif"],
+        images: ["img/project/SG-0.jpg", "img/project/SG-1.jpg", "img/project/SG-2.jpg", "img/project/SG-3.jpg", "img/project/SG-4.jpg", "img/project/SG-5.jpg", "img/project/preview.gif"],
         text: " "
     },
     2: {
         title: " ",
-        images: ["img/project/SSTM-0.png"],
+        images: ["img/project/SSTM-0.jpg"],
         text: " "
     },
     3: {
         title: " ",
-        images: ["img/project/FB-0.png"],
+        images: ["img/project/FB-0.jpg", "img/project/FB-1.jpg", "img/project/FB-2.jpg", "img/project/FB-3.jpg", "img/project/FB-4.jpg", "img/project/FB-5.jpg", "img/project/FB-6.jpg", ],
         text: " "
     },
     4: {
         title: " ",
-        images: ["img/project/HT-0.png", "img/project/HT-1.png", "img/project/HT-2.png", "img/project/HT-3.png", "img/project/HT-4.png", "img/project/HT-5.png", "img/project/HT-6.png"],
+        images: ["img/project/HT-0.jpg", "img/project/HT-1.jpg", "img/project/HT-2.jpg", "img/project/HT-3.jpg", "img/project/HT-4.jpg", "img/project/HT-5.jpg", "img/project/HT-6.jpg"],
         text: " "
     },
     5: {

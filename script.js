@@ -25,12 +25,12 @@ const projectDetails = {
     },
     5: {
         title: " ",
-        images: ["img/paper/tasies.jpg"],
+        images: ["img/project/APP.svg"],
         text: " "
     },
     6: {
         title: " ",
-        images: ["img/paper/tasies.jpg"],
+        images: ["img/project/IA.svg"],
         text: " "
     }
 };

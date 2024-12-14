@@ -25,12 +25,12 @@ const projectDetails = {
     },
     5: {
         title: " ",
-        images: ["img/project/APP.svg"],
+        images: ["img/project/APP-0.svg"],
         text: " "
     },
     6: {
         title: " ",
-        images: ["img/project/IA.svg"],
+        images: ["img/project/IA-0.svg"],
         text: " "
     }
 };

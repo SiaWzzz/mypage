@@ -10,7 +10,7 @@ const projectDetails = {
     },
     2: {
         title: " ",
-        images: ["img/project/SSTM-0.jpg", "img/project/SSTM-1.jpg", "img/project/SSTM-2.jpg", "img/project/SSTM-3.jpg", "img/project/SSTM-4.jpg", "img/project/SSTM-5.jpg", "img/project/SSTM-6.jpg", ],
+        images: ["img/project/SSTM-0.jpg", "img/project/SSTM-1.jpg", "img/project/SSTM-2.jpg", "img/project/SSTM-3.jpg", "img/project/SSTM-4.jpg", "img/project/SSTM-5.jpg", "img/project/SSTM-6.jpg" ],
         text: " "
     },
     3: {

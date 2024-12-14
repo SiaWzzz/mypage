@@ -32,11 +32,6 @@ const projectDetails = {
         title: " ",
         images: ["img/paper/tasies.jpg"],
         text: " "
-    },
-    7: {
-        title: " ",
-        images: ["img/paper/tasies.jpg"],
-        text: " "
     }
 };
 

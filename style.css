@@ -346,7 +346,7 @@ h4{
     border-bottom:1px solid var(--L-color);
     margin:0 auto;
     gap: 5%;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 .paper .left-s{
     position: relative; /* 为图片设置绝对定位提供相对参考 */

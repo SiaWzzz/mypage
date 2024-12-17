@@ -25,7 +25,7 @@ const projectDetails = {
     },
     5: {
         title: " ",
-        images: ["img/project/APP-0.jpg", "img/project/APP1-0.jpg", "img/project/APP1-1.jpg", "img/project/APP1-2.jpg", "img/project/APP1-3.jpg", "img/project/APP1-4.jpg", "img/project/APP1-5.jpg" ],
+        images: ["img/project/APP-0.jpg", "img/project/APP1-0.jpg", "img/project/APP1-1.jpg", "img/project/APP1-2.jpg", "img/project/APP1-3.jpg", "img/project/APP1-4.jpg", "img/project/APP1-5.jpg", "img/project/APP2-1.jpg", "img/project/APP2-2.jpg", "img/project/APP2-3.jpg", "img/project/APP2-4.jpg", "img/project/APP2-5.jpg" ],
         text: " "
     },
     6: {

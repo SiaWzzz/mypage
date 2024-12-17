@@ -30,7 +30,7 @@ const projectDetails = {
     },
     6: {
         title: " ",
-        images: ["img/project/EI-0.jpg"],
+        images: ["img/project/EI-0.jpg", "img/project/EI1-1.jpg", "img/project/EI1-2.jpg", "img/project/EI1-3.jpg", "img/project/EI1-4.jpg", "img/project/EI1-5.jpg", "img/project/EI1-6.jpg", ],
         text: " "
     }
 };
